@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Tolem.Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red:#E62727;
+      --cream:#F3F2EC;
+      --gray:#DCDCDC;
+      --blue:#1E93AB;
+      --dark:#1a1a1a;
+    }
+
+    body.dark{
+      --cream:#0f0f0f;
+      --dark:#f5f5f5;
+      --gray:#222;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--cream);
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;left:0;width:100%;
+      background:#fff;
+      z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+    }
+
+    body.dark header{background:#111}
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:1rem 1.5rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{font-weight:800;font-size:1.4rem;color:var(--red)}
+
+    #themeToggle{
+      background:none;border:none;cursor:pointer;font-size:1.2rem
+    }
+
+    /* PAGE LAYOUT */
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:8rem 1.5rem 4rem;
+      display:grid;
+      grid-template-columns:240px 1fr;
+      gap:3rem;
+    }
+
+    /* SIDE NAV */
+    .side-nav{
+      position:sticky;
+      top:120px;
+    }
+
+    .side-nav ul{list-style:none}
+    .side-nav li{margin-bottom:1rem;font-weight:600}
+    .side-nav a{opacity:.8}
+    .side-nav a:hover{opacity:1;color:var(--red)}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(135deg,var(--red),var(--blue));
+      border-radius:30px;
+      padding:3rem;
+      color:#fff;
+      margin-bottom:3rem;
+    }
+
+    .hero h1{font-size:2.4rem;font-weight:800}
+    .hero p{margin-top:1rem;max-width:600px}
+
+    /* CONTACT CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1.5rem;
+    }
+
+    .card{
+      padding:2rem;
+      border-radius:22px;
+      color:#fff;
+      font-weight:600;
+      box-shadow:0 20px 40px rgba(0,0,0,.15);
+      opacity:0;
+      transform:translateY(50px) scale(.95);
+      transition:.7s ease;
+    }
+
+    .card.show{opacity:1;transform:translateY(0) scale(1)}
+
+    .facebook{background:linear-gradient(135deg,#1877f2,#145bd1)}
+    .instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+    .whatsapp{background:linear-gradient(135deg,#25d366,#128c7e)}
+    .email{background:linear-gradient(135deg,#444,#111)}
+
+    .card span{display:block;margin-top:.6rem;font-weight:400;font-size:.9rem}
+
+    footer{
+      background:#111;
+      color:#fff;
+      text-align:center;
+      padding:3rem 1.5rem;
+      margin-top:4rem;
+    }
+
+    /* MOBILE */
+    @media(max-width:900px){
+      .container{grid-template-columns:1fr}
+      .side-nav{display:none}
+      .hero{padding:2rem}
+    }
+
+/* ===== DARK MODE SYSTEM ===== */
+body.dark{
+  --cream:#0f0f0f;
+  --dark:#f5f5f5;
+  --gray:#222;
+}
+
+body.dark{
+  background:#0f0f0f;
+  color:#f5f5f5;
+}
+
+body.dark header{
+  background:#111;
+}
+
+
+body.dark footer{
+  background:linear-gradient(135deg,#000,#1E93AB);
+}
+footer{background:linear-gradient(135deg,#111,var(--red));color:#fff;text-align:center;padding:3rem 1.5rem}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo"><a href="index.html" style="color:inherit">Tolem.Works</a></div>
+  <button id="themeToggle" title="Toggle dark mode"
+  style="font-size:1.2rem;background:none;border:none;cursor:pointer">
+  ☀️
+</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SIDE NAV -->
+  <aside class="side-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><strong>Contact</strong></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <section class="hero">
+      <h1>Contact Tolem.Works</h1>
+      <p>Let’s talk about your brand, goals, and how we can help you look established and grow with confidence.</p>
+
+<div class="reveal" style="margin-top:2rem; text-align:right;">
+  <img src="images/logo white.png" alt="LOGO" style="width:180px; height:auto;">
+</div>
+
+
+    </section>
+
+    <section class="cards">
+      <a class="card facebook" href="#">
+        Facebook
+        <span>Message us directly</span>
+      </a>
+      <a class="card instagram" href="#">
+        Instagram
+        <span>See our work & DM us</span>
+      </a>
+      <a class="card whatsapp" href="#">
+        WhatsApp
+        <span>Fast replies & quick questions</span>
+      </a>
+      <a class="card email" href="#">
+        Email
+        <span>hello@tolem.works</span>
+      </a>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>© 2025 Tolem.Works — Together Let's Make</p>
+</footer>
+
+<script>
+  /* CARD ANIMATION */
+  const cards=document.querySelectorAll('.card');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+  },{threshold:.2});
+  cards.forEach(c=>observer.observe(c));
+</script>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+
+  if (toggle) {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.onclick = () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      toggle.textContent = isDark ? '🌙' : '☀️';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    };
+  }
+</script>
+
+
+</body>
+</html>
